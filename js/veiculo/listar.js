@@ -4,7 +4,7 @@ let button = document.getElementById("button")
 button.addEventListener("click", (e) => {
     e.preventDefault()
 
-    fetch(`http://localhost:3000/compra`, {
+    fetch(`http://localhost:3000/veiculo`, {
         method: "GET",
         headers: { "content-type": "application/json" }
     })
@@ -12,17 +12,17 @@ button.addEventListener("click", (e) => {
         .then(dados => {
             let html = `<table border="1" cellpadding="8">
              <tr>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Email</th>
+                <th>Placa</th>
+                <th>Modelo</th>
+                <th>Fabricante</th>
             </tr>`
 
 
             dados.forEach(dad => {
                 html += `            <tr>
-                <td>${dad.nome}</td>
-                <td>${dad.telefone}</td>
-                <td>${dad.email}</td>
+                <td>${dad.placa}</td>
+                <td>${dad.modelo}</td>
+                <td>${dad.fabricante}</td>
             </tr>`
             })
 

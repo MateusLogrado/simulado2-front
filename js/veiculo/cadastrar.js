@@ -4,17 +4,17 @@ let res = document.getElementById("res")
 button.addEventListener("click", (e)=>{
     e.preventDefault()
 
-    let nome = document.getElementById("nome").value
-    let telefone = document.getElementById("telefone").value
-    let email = document.getElementById("email").value
+    let placa = document.getElementById("placa").value
+    let modelo = document.getElementById("modelo").value
+    let fabricante = document.getElementById("fabricante").value
 
     const valores = {
-        nome: nome,
-        telefone: telefone,
-        email: email
+        placa: placa,
+        modelo: modelo,
+       fabricante: fabricante
     }
 
-    fetch(`http://localhost:3000/cliente`, {
+    fetch(`http://localhost:3000/veiculo`, {
         method: "POST",
         headers: { 
             "content-type":"application/json" 
@@ -22,18 +22,18 @@ button.addEventListener("click", (e)=>{
         body: JSON.stringify(valores)
     })
     .then(resp => resp.body)
-    .then( ()=>{
+    .then(()=>{
         res.innerHTML = `
                 <table border="1" cellpadding="8">
             <tr>
-                <th>nome</th>
-                <th>telefone</th>
-                <th>Email</th>
+                <th>Placa</th>
+                <th>Modelo</th>
+                <th>Fabricante</th>
             </tr>
             <tr>
-                <td>${nome}</td>
-                <td>${telefone}</td>
-                <td>${email}</td>
+                <td>${placa}</td>
+                <td>${modelo}</td>
+                <td>${fabricante}</td>
             </tr>
         </table>`
     })
