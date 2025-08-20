@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/servico/atualizar.js" defer></script>
+    <link rel="stylesheet" href="../../style.css">
+    <title>Atualizar Serviço</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../servico.html">voltar</a>
+            <br><br>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <h1>Sistema de atualização de Serviço</h1>
+        <br>
+        <br>
+        <br>
+        <form>
+            <label for="servicoId">Digite o codigo unico do serviço</label><br>
+            <input type="number" id="servicoId"><br><br>
+            <button id="buscar">buscar</button><br><br>
+            <label for="idCliente">Coloque o codigo unico do cliente</label><br>
+            <input id="idCliente" type="text"><br><br>
+            <label for="idVeiculo">Coloque o codigo unico do veiculo</label><br>
+            <input id="idVeiculo" type="text"><br><br>
+            <label for="dataServico">Digite a data de serviço</label><br>
+            <input id="dataServico" type="text" placeholder="2022-08-23"><br><br>
+            <label for="descricaoServico">Digite a descrição do serviço</label><br>
+            <input id="descricaoServico" type="text" placeholder="aluguel de alguns dias"><br><br>
+            <label for="precoServico">Digite o custo do serviço</label><br>
+            <input id="precoServico" type="number" placeholder="140.10"><br><br>
+            <button id="button">atualizar</button>
+            <br><br>
+        </form>
+        <div id="res"></div>
+    </main>
+    <footer>
+        <hr>
+        <br>
+        <small>feito por: Mateus Queiroz Logrado &reg; &trade;</small>
+    </footer>
+</body>
+</html>
